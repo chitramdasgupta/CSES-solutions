@@ -46,8 +46,8 @@ class Labyrinth {
         boolean[][] visited = new boolean[numRows][numCols];
         visited[start.x][start.y] = true;
 
-        Map<Point, Point> parent = new HashMap<>();
-        Map<Point, Character> directionMap = new HashMap<>();
+        Map<Point, Point> parent = new HashMap<>(); // Point -> Parent point where the key was reached from
+        Map<Point, Character> directionMap = new HashMap<>(); // Point -> the direction taken to reach the key point from the parent
         parent.put(start, null);
 
         while (!q.isEmpty()) {
